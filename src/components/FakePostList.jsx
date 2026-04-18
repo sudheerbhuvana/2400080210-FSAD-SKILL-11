@@ -42,7 +42,7 @@ function FakePostList() {
     return (
         <div className="list-container">
             <div className="fakelist-header">
-                <h2 className="list-title">🗞️ Fake API Posts (DummyJSON)</h2>
+                <h2 className="list-title">Fake API Posts (DummyJSON)</h2>
                 <div className="controls">
                     <label htmlFor="userFilter">Filter by User ID:</label>
                     <select
@@ -58,13 +58,13 @@ function FakePostList() {
                         ))}
                     </select>
                     <button className="refresh-btn" onClick={fetchPosts}>
-                        🔄 Refresh
+                        Refresh
                     </button>
                 </div>
             </div>
 
-            {loading && <div className="status-msg loading">⏳ Loading posts...</div>}
-            {error && <div className="status-msg error">❌ Error: {error}</div>}
+            {loading && <div className="status-msg loading">Loading posts...</div>}
+            {error && <div className="status-msg error">Error: {error}</div>}
 
             {!loading && !error && (
                 <div className="posts-grid">

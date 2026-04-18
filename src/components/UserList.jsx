@@ -22,21 +22,21 @@ function UserList() {
             });
     }, []);
 
-    if (loading) return <div className="status-msg loading">⏳ Loading users from API...</div>;
-    if (error) return <div className="status-msg error">❌ Error: {error}</div>;
+    if (loading) return <div className="status-msg loading">Loading users from API...</div>;
+    if (error) return <div className="status-msg error">Error: {error}</div>;
 
     return (
         <div className="list-container">
-            <h2 className="list-title">🌐 Users API (JSONPlaceholder)</h2>
+            <h2 className="list-title">Users API (JSONPlaceholder)</h2>
             <div className="cards-grid">
                 {users.map((user) => (
                     <div key={user.id} className="user-card">
                         <div className="user-avatar">{user.name.charAt(0)}</div>
                         <div className="user-info">
                             <h3>{user.name}</h3>
-                            <p>📧 {user.email}</p>
-                            <p>📞 {user.phone}</p>
-                            <p>🌍 {user.address?.city}</p>
+                            <p>Email: {user.email}</p>
+                            <p>Phone: {user.phone}</p>
+                            <p>City: {user.address?.city}</p>
                         </div>
                     </div>
                 ))}

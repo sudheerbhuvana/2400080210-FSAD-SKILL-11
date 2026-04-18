@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="app-wrapper">
         <nav className="navbar">
-          <Link to="/" className="nav-brand">📰 NewsPortal</Link>
+          <Link to="/" className="nav-brand">NewsPortal</Link>
           <div className="nav-links">
             <Link to="/">Home</Link>
             <Link to="/local-users">Local Users</Link>
